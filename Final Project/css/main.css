@@ -1,0 +1,147 @@
+body {
+  background: #ffffff;
+  min-height: 900px;
+  position: relative;
+  background-size: cover;
+  font-family: 'Arimo', sans-serif; }
+
+.page {
+  background: white;
+  max-width: 1280px;
+  margin: 0 auto; }
+
+/* Body Section  */
+.pp-category-filter a {
+  display: inline-block;
+  margin: 0 10px 6px 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 3px; }
+
+.pp-gallery {
+  min-height: 500px; }
+  .pp-gallery .card-columns .card {
+    border: none;
+    margin-bottom: 0;
+    border-radius: none; }
+  @media (max-width: 992px) {
+    .pp-gallery .card-columns {
+      -moz-column-count: 2;
+           column-count: 2; } }
+  @media (max-width: 576px) {
+    .pp-gallery .card-columns {
+      -moz-column-count: 1;
+           column-count: 1; } }
+  .pp-gallery .card figure {
+    position: relative;
+    overflow: hidden;
+    margin: 10px 1%;
+    text-align: center; }
+  .pp-gallery .card figure img {
+    position: relative;
+    display: block;
+    max-width: 100%;
+    opacity: 1; }
+  .pp-gallery .card figure figcaption {
+    padding: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+  .pp-gallery .card figure figcaption,
+  .pp-gallery .card figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .pp-gallery .card figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0; }
+  .pp-gallery .card figure .h4 {
+    word-spacing: -0.15em;
+    font-weight: 600; }
+  .pp-gallery .card figure .h4,
+  .pp-gallery .card figure p {
+    margin: 0; }
+  .pp-gallery .card figure p {
+    letter-spacing: 1px;
+    font-size: 60%; }
+  .pp-gallery figure.pp-effect figcaption {
+    padding: 12px; }
+  .pp-gallery figure.pp-effect figcaption::before,
+  .pp-gallery figure.pp-effect figcaption::after {
+    position: absolute;
+    content: '';
+    opacity: 0; }
+  .pp-gallery figure.pp-effect figcaption::before {
+    top: 50px;
+    right: 30px;
+    bottom: 50px;
+    left: 30px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    transform: scale(0, 1);
+    transform-origin: 0 0; }
+  .pp-gallery figure.pp-effect figcaption::after {
+    top: 30px;
+    right: 50px;
+    bottom: 30px;
+    left: 50px;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    transform: scale(1, 0);
+    transform-origin: 100% 0; }
+  .pp-gallery figure.pp-effect .h4 {
+    padding-top: 26%;
+    transition: transform 0.35s;
+    opacity: 0; }
+  .pp-gallery figure.pp-effect p {
+    padding: 0.5em 2em;
+    text-transform: none;
+    opacity: 0;
+    transform: translate3d(0, -10px, 0); }
+  .pp-gallery figure.pp-effect img,
+  .pp-gallery figure.pp-effect .h4 {
+    transform: translate3d(0, -25px, 0); }
+  .pp-gallery figure.pp-effect img,
+  .pp-gallery figure.pp-effect figcaption::before,
+  .pp-gallery figure.pp-effect figcaption::after,
+  .pp-gallery figure.pp-effect p {
+    transition: opacity 0.35s, transform 0.35s; }
+  .pp-gallery figure.pp-effect:hover img {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); }
+  .pp-gallery figure.pp-effect:hover figcaption::before,
+  .pp-gallery figure.pp-effect:hover figcaption::after {
+    opacity: 1;
+    transform: scale(1); }
+  .pp-gallery figure.pp-effect:hover figcaption:before {
+    background: rgba(31, 30, 30, 0.5); }
+  .pp-gallery figure.pp-effect:hover .h4,
+  .pp-gallery figure.pp-effect:hover p {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    color: #FFFFFF; }
+  .pp-gallery figure.pp-effect:hover figcaption::after,
+  .pp-gallery figure.pp-effect:hover .h4,
+  .pp-gallery figure.pp-effect:hover p,
+  .pp-gallery figure.pp-effect:hover img {
+    transition-delay: 0.15s; }
+  @media (max-width: 768px) and (min-width: 578px) {
+    .pp-gallery figure.pp-effect:hover .h4 {
+      padding-top: 20%;
+      font-size: 16px; } }
+  @media (max-width: 375px) {
+    .pp-gallery figure.pp-effect:hover .h4 {
+      padding-top: 20%;
+      font-size: 16px; } }
+
+/* Common Style */
+.pp-section {
+  padding-top: 6rem; }

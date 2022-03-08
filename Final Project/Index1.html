@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang = "en">
+<head>
+	<meta charset="UTF-8">
+	<title>Main</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/> 
+
+	<style>
+	
+	*
+	{
+		margin: 0;
+		padding: 0;
+	}
+
+	section
+	{
+		padding-top:50px;
+		padding-bottom:50px;
+	}
+
+	header
+	{
+		height:170px;
+		width:100%;
+		background:#2c3e50;
+		border-bottom:10px orange solid;
+	} 
+
+	.container
+	{
+		width:85%;
+		overflow:hidden;
+		margin:auto;
+	}
+
+	.container2
+	{
+		width:90%;
+		overflow:hidden;
+		margin:auto;
+		margin-right:20px;
+	}
+	
+	.logo
+	{
+		font-family:sans-serif;
+		font-size:40px;
+		color:#ffffff;
+		margin-top: 30px;
+		margin-bottom:10px;
+	}
+	
+	.highlight
+	{
+		color:orange;
+	}
+	
+	.left-panel
+	{
+		width:50%;
+		float:left;
+	}
+
+	.right panel
+	{
+		width:50%;
+		float:right;
+
+	}
+
+	.social-icon
+	{
+		padding-top:5px;
+		padding-bottom:5px;
+	}
+
+	.fa
+	{
+		margin-right:10px;
+		background:#353535;
+		color:#fff;
+		width:29px;
+		height:25px;
+		text-align:center;
+		padding-top: 5px;
+		border-radius:100%;
+		transition:0.5s;
+	}
+
+	.fa:hover
+	{
+		background:#ffae46;
+		cursor:pointer;
+	}
+
+	.nav
+	{
+		float:right;
+	}
+
+	.nav ul
+	{
+		margin:0px;
+		padding:0px;
+		list-style-type:none;
+		float:left;
+	}
+
+	.nav ul li
+	{
+		display:inline-block;
+		margin-top: 40px;
+		padding: 5px 0px 5px 0px;
+		margin-left: 10px;
+		font-size:20px;
+		font-family:arial;
+	}
+
+	.nav ul li a
+	{
+		text-decoration:none;
+		color:white;
+		padding: 10px 20px 10px 20px;
+	}
+
+	.nav ul li a:after
+	{
+		background: #37c0c5;
+		content:"";
+		width:0;
+		height:5px;
+		display:block;
+		margin:5px 0;
+		transition:0.5s;
+	}
+
+	.nav ul li a:hover:after
+	{
+		width:100%;
+	}
+
+	.nav ul li a:hover
+	{
+		color:#ffeaa7;
+		font-weight:bold;
+	}
+	
+	.active
+	{
+		color:#d63031;
+		padding: 3px 1px 3px 1px;
+	}
+	
+	.apply
+	{
+		color:#ffffff;
+		font-family:bodoni mt;
+		background:#ff4d4d;
+		padding: 5px 125px;
+		text-align:center;
+		font-family:sans-serif;
+		font-size:18px;
+		border-radius:30px;
+		text-decoration:none;
+		float:right;
+		margin-top: 0px;
+		margin-left:100px;
+		transition:0.5s;
+	}
+	
+	.apply:hover
+	{
+		background:#f39c12;
+	}
+.banner
+	{
+		width:100%;
+		height:600px;
+		background:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1));
+		background-size:cover;
+		animation:animate 20s ease infinite;
+	}
+	
+	@keyframes animate
+	{
+	 0%,100%
+	 {
+	 background-image:url(images/e.jpg);
+	 }
+	 20%
+	 {
+	 background-image:url(images/Netaji6.jpg);
+	 }
+	 40%
+	 {
+	 background-image:url(images/netaji.jpeg);
+	 }
+	 60%
+	 {
+	 background-image:url(images/freshers1.jpg);
+	 }
+	 80%
+	 {
+	 background-image:url(images/sports3.jpg);
+	 }
+	 }
+	
+
+	
+	.left-panel2
+	{
+		width:45%;
+		padding: 15px;
+		float:left;
+		margin-top:50px;
+	}
+		
+	.left-panel2 h1
+	{
+		font-family:arial;
+		color:#xxx;
+		letter-spacing:5px;
+		margin-bottom:50px;
+	}	
+
+	.left-panel2 a.read-more
+	{
+		width:200px;
+		height:150px;
+		padding: 15px;
+		text-align:center;
+		font-size:20px;
+		color:#fff;
+		background: #e17055;
+		border-radius:25px;
+		margin-left: 0px;
+		text-decoration:none;
+		transition: 0.5s;
+	}
+	
+	.left-panel2 a.read-more:hover
+	{
+		background: #d63031;
+	}
+	
+	.right-panel2
+	{
+		width:30%;
+		padding: 15px;
+		float:right;
+		margin-top: 70px;
+	}
+	
+	form.form
+	{
+		margin-top:0px;
+		width:320px;
+		overflow:hidden;background: rgba(0,0,0,.6);
+		padding:30px;
+		border-radius:20px;
+		spacing:10px;
+	}	
+		
+	form.form label
+	{
+		color:white;
+		margin-bottom:0px;
+		font-family:Arial;
+		font-size:16px;
+	}
+		
+	form.form input
+	{
+		height: 25px;
+		width:300px;
+		padding: 5px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		background: rgba(200, 200, 200,.4);
+		color:#fff;
+	}
+		
+	form.form input[type="submit"]
+	{
+		width:100px;
+		height:35px;
+		background: #e67e22;
+	}
+		
+	#intro
+	{
+		margin:auto;
+		width:90%;
+		overflow:hidden;
+		border-top:10px solid orange;
+		border-bottom: 10px solid orange;
+		background:#ffeaa7;
+	}
+
+	#intro .intro-area
+	{
+		width:30%;
+		float:left;
+		margin-right:1px;
+		margin-left:20px
+	}
+
+	#intro .intro-area:last-child
+	{
+		margin-right:10px;
+	}
+
+	#intro .intro-area img
+	{
+		width:300px;
+		height: 160px;
+		margin-bottom:20px;
+		margin-top:30px;
+		background: #353535;
+		border-radius:15px;
+	}
+
+	#intro .intro-area h3
+	{
+		font-family:sans-serif;
+		font-size:30px;
+		color:#e74c3c;
+		margin-bottom: 10px;
+	}
+
+	#intro .intro-area p
+	{
+		font-family:Arial;
+		font-weight:bold;
+		font-size:18px;
+		color:black;
+		margin-bottom: 20px;
+		line-height:22px;
+	}
+	
+
+	#intro .intro-area a.read-more
+	{
+		background:#ff4d4d;
+		padding: 10px 20px;
+		text-align:center;
+		font-family:sans-serif;
+		font-size:18px;
+		border-radius:30px;
+		text-decoration:none;
+		color:#fff;
+		transition:0.5s;
+	}
+
+	#intro .intro-area a.read-more:hover
+	{
+		background:#2f3542;
+	}
+
+	#footer-area
+	{
+		background:#2f3542;
+	}
+	
+	#footer-area .footer-widget
+	{
+		width:20%;
+		color:#ffffff;
+		float: left;
+		margin-right:50px;
+	}
+
+	#footer-area .footer-widget h1
+	{
+		font-family:sans-serif;
+		font-size:24px;
+		margin-bottom:20px;
+	}
+
+	#footer-area .footer-widget p
+	{
+		font-size:20px;
+	}
+
+	#footer-area .footer-widget ul 
+	{
+		margin:0;
+		padding:0;
+		list-style-type:none;
+	}
+
+	#footer-area .footer-widget li
+	{
+		
+		border-bottom: 1px solid #fff;
+	}
+
+	#footer-area .footer-widget ul li a
+	{
+		color:#1db0ae;
+		font-size:18px;
+		text-decoration:none;
+	}
+
+	#footer-area .footer-widget ul li a:before
+	{
+		content: "\f101";
+		font-family:fontAwesome;
+		font-size:15px;
+		margin-right: 5px;
+	}
+
+	form input
+	{
+		height: 30px;
+		width: 200px;
+		border-radius:20px;
+		padding: 10px;
+		background: rgba(0,0,0,.5);
+		border:none;
+		margin-bottom: 8px;
+	}
+
+	form button
+	{
+		border-radius:20px;
+		color:#ffffff;
+		background:#f39c12;
+		border:none;
+		height: 40px;
+		padding: 10px;
+		width:100px;
+	}
+
+	footer
+	{
+		background: #1a1a1a;
+		color:#fff;
+		padding: 30px;
+	}
+
+	footer p
+	{
+		float:left;
+		font-family:Arial;
+		font-size:17px;
+	}
+
+	footer h3
+	{
+		float:right;
+		font-family:Arial;
+	}
+	</style>
+</head>
+ 
+ <body>
+	<marquee behavior="alternate" width = "100%" bgcolor="pink"><a href="Gallery.html"><big><big><big><font color="red">23rd January Netaji Birthday</font></a></marquee>
+	<header>
+<div class="container">
+		<div class="left-panel">
+			<div class="logo">
+				<h2><u><span class="highlight">Netaji</span>  University</u></h2>
+			</div>
+			
+			<div class = "social-icon">
+				<i class="fa fa-facebook"></i>
+				<i class="fa fa-twitter"></i>
+				<i class="fa fa-linkedin"></i>
+				<i class="fa fa-whatsapp"></i>
+				<i class="fa fa-instagram"></i>
+			</div>
+		</div>
+			
+			<div class="right-panel">	
+				<div class="nav">
+					<ul>
+						<li><span class ="active"><a href="Index1.html">Home</a></span></li>
+						<li><span class ="active"><a href="Gallery.html">Events</a></span></li>
+						<li><span class ="active"><a href="About-us.html">About us</a></span></li>
+						<li><span class ="active"><a href="Contact.html">Contact us</a></li>	
+					</ul>
+				</div>
+				<div class="apply">
+					<h3>Apply Now</h3>
+				</div>
+			</div>
+		</div>
+	</header>	
+			
+	<div class="banner">
+			<div class="container">
+				<div class="left-panel2">
+					
+					<h1>Let's begin your Journey of Education with us!!</h1>
+					<a href="About-us.html" class="read-more">Read More</a>
+				</div>
+				<div class="right-panel2">
+					<form action="" class="form">
+						<label for="">Your Name</label><br/>
+						<input type="text" name="fn"><br/>
+						<label for="">Email</label><br/>
+						<input type="email" name="eml"><br/>
+						<label for="">contact No.</label><br/>
+						<input type="number" name="con"><br/>
+						<input type="submit" value="Send">
+					</form>
+				</div>
+			</div>
+		</div>
+		
+	<div class="container">
+		<section id="intro">
+			<div class="intro-area">
+				<img src="images/b.jpg">
+				<h3>BCA</h3>
+				<p>Package at just Rs. @2.5 Lakh</p>
+				
+			</div>
+			<div class="intro-area">
+				<img src="images/c.jpg" alt="">
+				<h3>BBA</h3>
+				<p>Package at just Rs. @2.7 Lakh</p>
+				
+			</div>
+			<div class="intro-area">
+				<img src="images/d.jpg" alt="">
+				<h3>B.Tech</h3>
+				<p>Package at just Rs. @3.0 Lakh</p>
+				
+			</div>
+			<div class="intro-area">
+				<img src="images/e.jpg" alt="">
+				<h3>MCA</h3>
+				<p>Package at just Rs. @5.0 Lakh</p>
+				
+			</div>
+			<div class="intro-area">
+				<img src="images/f.jpg" alt="">
+				<h3>MBA</h3>
+				<p>Package at just Rs. @5.5 Lakh</p>
+				
+			</div>
+			<div class="intro-area">
+				<img src="images/g.jpg" alt="">
+				<h3>M.Tech</h3>
+				<p>Package at just Rs. @6.0 Lakh</p>
+				
+			</div>
+		</section>
+	</div>
+	
+		
+	<section id="footer-area">
+			<div class="container2">
+				<div class="footer-widget">
+					<h1>Address</h1>
+					<address>
+						221/B Park Street<br />
+						3rd Floor, Room No. 105<br />
+						Everest House<br />
+						Kolkata - 700009<br /><br />
+
+						email: netajiuniversity_1999@gmail.com <br />
+						Ph No. - 9874364091 <br />
+						website: www.netajiuniversity.org <br />
+					</address>
+				</div>
+				<div class="footer-widget">
+					<h1>Our Social Media links</h1>
+					<ul>
+					
+						<li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i>Join us using Facebook.</a></li><br />
+						<li><a href="https://www.whatsapp.com/"><i class="fa fa-whatsapp"></i>Join us using Whatsapp.</a></li><br />
+						<li><a href="https://telegram.org/"><i class="fa fa-telegram"></i>Join us using Telegram.</a></li><br />
+						<li><a href="https://www.instagram.com/accounts/login/"><i class="fa fa-instagram"></i>Join us using Instagram.</a></li><br />
+						<li><a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D"><i class="fa fa-twitter"></i>Join us using Twitter.</a></li><br />
+						<li><a href="https://www.linkedin.com/signup"><i class="fa fa-linkedin"></i>Join us using Linkedin.</a></li><br />
+					
+					</ul>
+				</div>
+				<div class="footer-widget">
+					<h1>Events</h1>
+					<h3></h3><br />
+					<p style="font-size:20px;">1. Annual College Fest</p>
+					<p style="font-size:20px;">2. Annual Induction</p>
+					<p style="font-size:20px;">3. Interactive Industrial Session</p>
+					<p style="font-size:20px;">4. Annual Sports</p>			
+					<p style="font-size:20px;">5. Freshers Party</p>
+				</div>
+
+				<div class="footer-widget">
+					<h1>Subscribe to our Newsletter</h1>
+					
+					
+					<form>
+						<input type="text" placeholder="Name" />
+						<input type="email" placeholder="Email" /><br />
+						<button type="submit" value="send">Send</button>
+					</form>
+					
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="container">
+				<p>&copy All the rights are reserved under Netaji University</p>
+				<h3>Design by Group 1</h3>
+			</div>	
+		</footer>
+		
+		
+	
+</body>
+</html>
